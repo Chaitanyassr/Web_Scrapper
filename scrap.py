@@ -11,7 +11,22 @@ page_soup = soup(page_html, "html.parser")
 '''where in below code we deifne a variable which acutlly represnet the container class of the page that contain information'''
 con = page_soup.findAll("div", ("class": "container"))
 
-cont = con[0]
-print(con.div.)
+con = page_soup.findAll("div", ("class": "maincounter-wrap"))
+print(cases.text)
+
+filename="data.csv"
+f= open(filename, "w")
+
+'''file creation'''
+header="coronavirus cases in India"
+f.write(header)
+
+data = page_soup.findAll("div", ("class": "maincounter-wrap"))
+print(data)
+
+f.close()
+
+
+
 
 
